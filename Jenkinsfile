@@ -17,12 +17,12 @@ stages {
         steps{
                 sh 'docker login -u subhadipdocker -p 7699676975'
              }
-   }
+        }
    stage('image push'){
        steps{ 
             sh 'docker tag nginx subhadipdocker/subhadip:latest'
             sh 'docker push subhadipdocker/subhadip:latest'
             }
-     }
-  }
+       }
+   } 
 }
