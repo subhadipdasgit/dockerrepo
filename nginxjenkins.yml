@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-deployment
+  labels:
+    app: pod-deployment
+    type: front-end
+spec:
+  containers:
+  - name: mynginx
+    image: subhadipdocker/subhadip:latest
+  replicas: 4
+  selector:
+    matchLabels:
+      type: front-end      
