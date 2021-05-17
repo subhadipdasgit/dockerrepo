@@ -7,7 +7,11 @@ stages {
                 sh 'docker images'
              }
         }
-   
+   stage('git clone'){
+        steps{
+               git credentialsId: '7b67be65-92ac-4c3b-9c28-fbbf15a10647', url: 'https://github.com/subhadipdasgit/dockerrepo.git'
+        }
+   }
    //stage('image pull'){
         //steps{
                 //sh 'docker pull subhadipdocker/subhadip:latest'
