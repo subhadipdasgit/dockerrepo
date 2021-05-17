@@ -7,7 +7,8 @@ stages {
                 sh 'docker images'
              }
         }
-   //tage('image pull'){
+   
+   //stage('image pull'){
         //steps{
                 //sh 'docker pull subhadipdocker/subhadip:latest'
              
@@ -24,5 +25,12 @@ stages {
             //sh 'docker push subhadipdocker/subhadip:latest'
             //}
        //}
-   } 
+   stage('deployment'){
+        steps{
+                sh 'kubectl apply -f nginxjenkins.yml'
+                sh 'kubectl get all'
+             
+             }
+        }
+    } 
 }
