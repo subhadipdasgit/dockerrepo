@@ -20,8 +20,8 @@ stages {
         }
    stage('image push'){
        steps{ 
-            sh 'docker tag nginx subhadipdocker/subhadip:latest'
-            sh 'docker push subhadipdocker/subhadip:latest'
+            sh 'docker tag nginx subhadipdocker/subhadip:exam'
+            sh 'docker push subhadipdocker/subhadip:exam'
             }
        }
    } 
